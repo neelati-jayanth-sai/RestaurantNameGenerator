@@ -1,0 +1,14 @@
+# Virtual environment
+venv/
+virtualenv/
+
+# Python bytecode
+*.pyc
+__pycache__/
+
+# Environment variables
+.env
+
+# Editor files
+.vscode/
+*.swp
