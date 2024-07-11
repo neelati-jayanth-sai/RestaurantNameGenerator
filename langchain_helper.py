@@ -1,9 +1,13 @@
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain_huggingface import HuggingFaceEndpoint
-from secret_keys import huggingface_api
+
+import os
+
+huggingface_api = os.getenv('HUGGINGFACE_API_KEY')
 
 # Define the Hugging Face model endpoint
+
 repo_id = "mistralai/Mistral-7B-Instruct-v0.2"
 llm = HuggingFaceEndpoint(repo_id=repo_id, temperature=0.6, token=huggingface_api, max_length=40)
 
